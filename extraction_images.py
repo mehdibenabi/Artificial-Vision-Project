@@ -1,8 +1,8 @@
 import cv2
 import os
 
-video_path = "video.mp4"
-output_dir = "images"
+video_path = "./video.MOV"
+output_dir = "./images"
 os.makedirs(output_dir, exist_ok=True)
 
 cap = cv2.VideoCapture(video_path)
