@@ -112,7 +112,7 @@ def triangulate_points(K, R1, t1, R2, t2, pts1, pts2):
 
 def main():
     # Charger les images
-    images = load_images("images")  
+    images = load_images("./images2")  
     
     if len(images) < 2:
         print("Au moins deux images sont nécessaires pour la reconstruction.")

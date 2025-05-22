@@ -1,7 +1,7 @@
 import cv2
 import os
 
-video_path = "./video.MOV"
+video_path = "./video.mov"
 output_dir = "./images"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -13,7 +13,7 @@ while cap.isOpened():
     if not ret:
         break
 
-    if frame_count % 5 == 0:  # Prendre une image tous les 5 frames
+    if frame_count % 10 == 0:  # Prendre une image tous les 5 frames
         filename = f"{output_dir}/{frame_count:04d}.png"
         cv2.imwrite(filename, frame)
 
