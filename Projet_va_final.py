@@ -125,11 +125,18 @@ def main():
     # Pour une caméra non calibrée, on peut utiliser une approximation
     h, w = images[0].shape
     focal_length = 0.8 * w  # Approximation de la longueur focale
+
     K = np.array([
         [focal_length, 0, w/2],
         [0, focal_length, h/2],
         [0, 0, 1]
     ])
+    
+    # K = np.array([
+    #  [1596,    0, 960],
+    #  [   0, 1596, 540],
+    #  [   0,    0,   1]
+    # ])
     
     # Initialiser la reconstruction avec les deux premières images
     R_list = [np.eye(3)]  # Rotation de la première caméra (identité)
